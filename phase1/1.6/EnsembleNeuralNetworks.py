@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 import numpy as np
@@ -14,18 +14,29 @@ import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import models, layers, activations, initializers
 
-
-# In[2]:
-
-
 class ENN:
     
     """Ensemble neural networks
     Parameters
     ----------
+    n_estimators: int
+        number of networks
+    train: list
+        save the training sets len(train) == n_estimators
+    test: list
+        save the testing sets len(test) == n_estimators
+    models: list
+        save the neural networks model
+    results: numpy.array
+        save the training / testing results 
     
     Attributes
     ----------
+    bootstrap: generate the training and testing set
+    build_model: build the neural network model
+    fit: fit the models
+    predict: make the prediction (average)
+    get_results: print out the results
     """
     
     def __init__(self, n_estimators = None, train = None, test = None, models = None, results = None):
