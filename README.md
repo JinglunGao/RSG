@@ -1,4 +1,4 @@
-## Independent Research Repository 
+## Research Repository 
 
 * Wrote bootstrap ensemble neural network in Python and trained it on the real word E-mini S&P 500 options data to predict the implied volatility. 
 Used the predicted implied volatility as an input in the Bjerksund-Stensland 2002 model and achieved more than 99% R Squared for both Call and Put Options. 
